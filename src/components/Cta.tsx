@@ -30,9 +30,12 @@ export default function Cta() {
             <p className="text-[10px] text-[#444] uppercase tracking-[2px] font-semibold mb-2.5">
               Email
             </p>
-            <p className="text-[20px] font-extrabold tracking-tight text-[#e0e0e0]">
+            <a
+              href="mailto:oi@labub.com.br"
+              className="text-[20px] font-extrabold tracking-tight text-[#e0e0e0] hover:text-white transition-colors"
+            >
               oi@labub.com.br
-            </p>
+            </a>
             <p className="text-[11px] text-[#333] mt-2">Resposta em até 24h</p>
           </div>
 
@@ -42,9 +45,14 @@ export default function Cta() {
             <p className="text-[10px] text-[#444] uppercase tracking-[2px] font-semibold mb-2.5">
               WhatsApp
             </p>
-            <p className="text-[20px] font-extrabold tracking-tight text-[#25d366]">
+            <a
+              href="https://wa.me/5551999990000"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[20px] font-extrabold tracking-tight text-[#25d366] hover:text-[#34d399] transition-colors"
+            >
               +55 (51) 99999-0000
-            </p>
+            </a>
             <p className="text-[11px] text-[#333] mt-2">Resposta imediata</p>
           </div>
         </div>

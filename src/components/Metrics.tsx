@@ -7,10 +7,7 @@ export default function Metrics() {
 
   return (
     <div className="relative overflow-hidden marquee-fade mt-16 border-t border-b border-white/[0.06]">
-      <div
-        className="flex w-max"
-        style={{ animation: 'marquee 28s linear infinite' }}
-      >
+      <div className="flex w-max animate-marquee">
         {doubled.map((m, i) => (
           <div
             key={i}

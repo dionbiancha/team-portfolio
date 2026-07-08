@@ -22,7 +22,7 @@ export default function Hero() {
         <div className="inline-flex items-center gap-2 bg-[rgba(99,102,241,0.1)] border border-[rgba(99,102,241,0.25)] px-3.5 py-1.5 rounded-full mb-8">
           <span className="w-1.5 h-1.5 rounded-full bg-accent shadow-[0_0_8px_#6366f1]" />
           <span className="text-[11px] text-[#a5b4fc] font-medium tracking-wide">
-            Aceitando novos projetos em 2025
+            Aceitando novos projetos em 2026
           </span>
         </div>
 
