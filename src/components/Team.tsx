@@ -13,9 +13,12 @@ export default function Team() {
         <span className="text-[#444]">Especialistas de verdade.</span>
       </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden">
+      <div className="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-4">
         {team.map((member) => (
-          <div key={member.area} className="group relative bg-card p-5 md:p-7 overflow-hidden">
+          <div
+            key={member.area}
+            className="group relative bg-card p-5 md:p-7 overflow-hidden border border-white/[0.06] rounded-2xl"
+          >
             {/* Accent line on hover */}
             <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[rgba(99,102,241,0.5)] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
 
