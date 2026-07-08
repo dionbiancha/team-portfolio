@@ -36,6 +36,32 @@ export default function Team() {
             <p className="text-[16px] font-bold text-[#e0e0e0] tracking-tight">
               {member.lead}
             </p>
+
+            <div className="flex gap-2 mt-3">
+              <a
+                href={member.linkedinUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`LinkedIn de ${member.lead}`}
+                className="w-7 h-7 flex items-center justify-center rounded-full border border-white/[0.1] text-[#666] hover:text-accent hover:border-accent transition-colors"
+              >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z" />
+                </svg>
+              </a>
+              <a
+                href={member.portfolioUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Portfólio de ${member.lead}`}
+                className="w-7 h-7 flex items-center justify-center rounded-full border border-white/[0.1] text-[#666] hover:text-accent hover:border-accent transition-colors"
+              >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M3 12h18M12 3a14.5 14.5 0 0 1 0 18M12 3a14.5 14.5 0 0 0 0 18" />
+                </svg>
+              </a>
+            </div>
           </div>
         ))}
       </div>
