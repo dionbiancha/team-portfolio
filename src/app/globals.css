@@ -1,26 +1,66 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  /* === Custom Design Tokens (Tailwind v4) ===
+     In Tailwind v4, all customization lives here — not in tailwind.config.ts.
+     Add brand colors, fonts, animations, and keyframes in this block. */
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --font-sans: "Inter", system-ui, sans-serif;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --color-bg: #080808;
+  --color-card: #0d0d0d;
+  --color-accent: #6366f1;
+  --color-muted: #555555;
+  --color-subtle: #333333;
+  --color-dimmed: #444444;
+
+  --animate-marquee: marquee 28s linear infinite;
+
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
   }
 }
 
+/* Outline text helper */
+.text-outline {
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(240, 240, 240, 0.2);
+}
+
+/* Gradient text helper */
+.text-gradient {
+  background: linear-gradient(90deg, #6366f1, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Marquee fade edges */
+.marquee-fade::before,
+.marquee-fade::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 160px;
+  z-index: 2;
+  pointer-events: none;
+}
+.marquee-fade::before {
+  left: 0;
+  background: linear-gradient(to right, #080808 0%, transparent 100%);
+}
+.marquee-fade::after {
+  right: 0;
+  background: linear-gradient(to left, #080808 0%, transparent 100%);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #080808;
+  color: #f0f0f0;
 }
