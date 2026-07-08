@@ -8,10 +8,10 @@ const links = [
 
 export default function Nav() {
   return (
-    <nav className="sticky top-0 z-50 flex items-center justify-between px-12 py-5 border-b border-white/[0.06] bg-[rgba(8,8,8,0.85)] backdrop-blur-md">
+    <nav className="sticky top-0 z-50 flex items-center justify-between px-12 py-5 border-b border-white/[0.06] bg-[rgba(8,8,8,0.85)] backdrop-blur-md" aria-label="Navegação principal">
       {/* Logo */}
       <div className="flex items-center gap-2.5">
-        <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#6366f1] to-[#3b82f6] flex items-center justify-center text-white font-black text-sm tracking-tighter">
+        <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-accent to-[#3b82f6] flex items-center justify-center text-white font-black text-sm tracking-tighter" aria-hidden="true">
           lb
         </div>
         <span className="text-[17px] font-extrabold tracking-tight">
