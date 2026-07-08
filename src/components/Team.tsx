@@ -40,6 +40,21 @@ export default function Team() {
               {member.lead}
             </p>
 
+            <p className="text-[12.5px] leading-relaxed text-[#888] mt-2">
+              {member.tagline}
+            </p>
+
+            <div className="flex flex-wrap gap-1.5 mt-2.5">
+              {member.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="text-[10px] font-semibold text-[#b7b8ff] bg-accent/10 border border-accent/[0.22] px-2 py-1 rounded-md"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+
             <div className="flex gap-2 mt-3">
               <a
                 href={member.linkedinUrl}

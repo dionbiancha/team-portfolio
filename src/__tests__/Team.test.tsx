@@ -30,4 +30,13 @@ describe('Team', () => {
     expect(screen.getByLabelText('LinkedIn de Pedro Alves')).toHaveAttribute('href', '#')
     expect(screen.getByLabelText('Portfólio de Pedro Alves')).toHaveAttribute('href', '#')
   })
+
+  it('renders specialty tagline and skill tags for each lead', () => {
+    render(<Team />)
+    expect(
+      screen.getByText('Deixa qualquer interface rápida mesmo em conexão fraca.')
+    ).toBeInTheDocument()
+    expect(screen.getByText('React')).toBeInTheDocument()
+    expect(screen.getByText('Next.js')).toBeInTheDocument()
+  })
 })

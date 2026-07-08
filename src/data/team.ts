@@ -7,6 +7,8 @@ export type TeamMember = {
   members: string[]
   linkedinUrl: string
   portfolioUrl: string
+  tagline: string
+  tags: string[]
 }
 
 export const team: TeamMember[] = [
@@ -18,6 +20,8 @@ export const team: TeamMember[] = [
     members: ['Rafael Mendes', 'Camila Torres'],
     linkedinUrl: '#',
     portfolioUrl: '#',
+    tagline: 'Deixa qualquer interface rápida mesmo em conexão fraca.',
+    tags: ['React', 'Next.js'],
   },
   {
     area: 'Backend',
@@ -27,6 +31,8 @@ export const team: TeamMember[] = [
     members: ['Thiago Ramos', 'Julia Neves'],
     linkedinUrl: '#',
     portfolioUrl: '#',
+    tagline: 'Projeta APIs que aguentam picos de tráfego sem cair.',
+    tags: ['Node.js', 'PostgreSQL'],
   },
   {
     area: 'UX Design',
@@ -36,6 +42,8 @@ export const team: TeamMember[] = [
     members: ['Diego Farias', 'Letícia Braga'],
     linkedinUrl: '#',
     portfolioUrl: '#',
+    tagline: 'Testa cada fluxo com usuários antes de aprovar.',
+    tags: ['Figma', 'Design System'],
   },
   {
     area: 'DevOps',
@@ -45,5 +53,7 @@ export const team: TeamMember[] = [
     members: ['Renata Silva', 'Bruno Carvalho'],
     linkedinUrl: '#',
     portfolioUrl: '#',
+    tagline: 'Automatiza deploys pra ninguém dormir com medo de subir errado.',
+    tags: ['Kubernetes', 'Docker'],
   },
 ]
