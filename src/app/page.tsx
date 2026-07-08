@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <>
       <SmokeCanvas />
-      <div className="relative" style={{ zIndex: 1 }}>
+      <div className="relative mx-auto w-full max-w-[1440px]" style={{ zIndex: 1 }}>
         <Nav />
         <main>
           <Hero />
