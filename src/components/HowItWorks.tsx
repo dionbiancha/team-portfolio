@@ -19,23 +19,23 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="px-12 py-[120px] bg-[rgba(99,102,241,0.03)]">
+    <section className="px-4 md:px-12 py-16 md:py-[120px] bg-[rgba(99,102,241,0.03)]">
       <p className="text-[11px] text-accent uppercase tracking-[2px] font-semibold mb-3">
         Simples assim
       </p>
-      <h2 className="text-[36px] font-extrabold tracking-[-1.5px] text-[#f0f0f0] mb-12">
+      <h2 className="text-[24px] md:text-[36px] font-extrabold tracking-[-1px] md:tracking-[-1.5px] text-[#f0f0f0] mb-8 md:mb-12">
         Três passos{' '}
         <span className="text-[#444]">para começar.</span>
       </h2>
 
-      <div className="grid grid-cols-3 gap-0.5">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-0.5">
         {steps.map((step) => (
           <div
             key={step.num}
-            className="bg-card border border-white/[0.06] rounded-xl p-9"
+            className="bg-card border border-white/[0.06] rounded-xl p-5 md:p-9"
           >
             <div
-              className="text-[72px] font-black leading-none tracking-[-4px] mb-4"
+              className="text-[48px] md:text-[72px] font-black leading-none tracking-[-4px] mb-4"
               aria-hidden="true"
               style={{
                 color: 'transparent',
@@ -44,7 +44,7 @@ export default function HowItWorks() {
             >
               {step.num}
             </div>
-            <h3 className="text-[18px] font-bold text-[#e0e0e0] tracking-tight mb-2">
+            <h3 className="text-[16px] md:text-[18px] font-bold text-[#e0e0e0] tracking-tight mb-2">
               {step.title}
             </h3>
             <p className="text-[13px] text-[#555] leading-[1.6]">{step.desc}</p>

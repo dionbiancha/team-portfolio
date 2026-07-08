@@ -3,15 +3,15 @@ const pills = ['Frontend', 'Backend', 'UX Design', 'DevOps']
 
 export default function Services() {
   return (
-    <section id="servicos" className="px-12 py-[120px]">
-      <div className="grid grid-cols-2 gap-16 items-center">
+    <section id="servicos" className="px-4 md:px-12 py-16 md:py-[120px]">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
 
         {/* Texto */}
         <div>
           <p className="text-[11px] text-accent uppercase tracking-[2px] font-semibold mb-4">
             O que entregamos
           </p>
-          <h2 className="text-[44px] font-black tracking-[-2.5px] leading-[1.05] text-[#f0f0f0] mb-5">
+          <h2 className="text-[28px] md:text-[44px] font-black tracking-[-1.5px] md:tracking-[-2.5px] leading-[1.05] text-[#f0f0f0] mb-5">
             Da ideia ao{' '}
             <em className="text-outline not-italic">deploy,</em>
             <br />
@@ -39,7 +39,7 @@ export default function Services() {
         </div>
 
         {/* Mockup UI */}
-        <div className="relative bg-card border border-white/[0.07] rounded-2xl overflow-hidden h-[340px] flex flex-col">
+        <div className="relative bg-card border border-white/[0.07] rounded-2xl overflow-hidden h-[240px] md:h-[340px] flex flex-col">
           {/* Ambient glow */}
           <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_85%_30%,rgba(59,130,246,0.08),transparent_50%),radial-gradient(ellipse_at_15%_70%,rgba(99,102,241,0.1),transparent_50%)]" />
 

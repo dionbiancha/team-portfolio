@@ -40,16 +40,16 @@ function CaseLogo({ name }: { name: string }) {
 
 export default function Cases() {
   return (
-    <section id="cases" className="px-12 py-[120px]">
+    <section id="cases" className="px-4 md:px-12 py-16 md:py-[120px]">
       <p className="text-[11px] text-accent uppercase tracking-[2px] font-semibold mb-3">
         O que já entregamos
       </p>
-      <h2 className="text-[36px] font-extrabold tracking-[-1.5px] text-[#f0f0f0] mb-12">
+      <h2 className="text-[24px] md:text-[36px] font-extrabold tracking-[-1px] md:tracking-[-1.5px] text-[#f0f0f0] mb-8 md:mb-12">
         Projetos que{' '}
         <span className="text-[#444]">fazem a diferença.</span>
       </h2>
 
-      <div className="grid grid-cols-3 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
         {cases.map((c) => (
           <div key={c.name} className="bg-card border border-white/[0.06] rounded-xl overflow-hidden">
             {/* Logo area */}

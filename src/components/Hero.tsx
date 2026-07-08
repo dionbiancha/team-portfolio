@@ -1,7 +1,7 @@
 // src/components/Hero.tsx
 export default function Hero() {
   return (
-    <section className="relative px-12 pt-24 pb-0 overflow-hidden">
+    <section className="relative px-4 md:px-12 pt-12 md:pt-24 pb-0 overflow-hidden">
       {/* Grid decorativo */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -17,7 +17,7 @@ export default function Hero() {
       {/* Glow radial */}
       <div className="absolute pointer-events-none -top-32 -left-24 w-[600px] h-[600px] rounded-full bg-[radial-gradient(circle,rgba(99,102,241,0.12)_0%,transparent_65%)]" />
 
-      <div className="relative z-10 max-w-3xl">
+      <div className="relative z-10 w-full max-w-3xl">
         {/* Badge */}
         <div className="inline-flex items-center gap-2 bg-[rgba(99,102,241,0.1)] border border-[rgba(99,102,241,0.25)] px-3.5 py-1.5 rounded-full mb-8">
           <span className="w-1.5 h-1.5 rounded-full bg-accent shadow-[0_0_8px_#6366f1]" />
@@ -27,14 +27,14 @@ export default function Hero() {
         </div>
 
         {/* Headline 3 linhas */}
-        <h1 className="text-[64px] font-black tracking-[-3px] leading-none mb-6">
+        <h1 className="text-[36px] md:text-[64px] font-black tracking-[-2px] md:tracking-[-3px] leading-none mb-4 md:mb-6">
           <span className="block text-[#f0f0f0]">Construímos</span>
           <span className="block text-outline">o digital que</span>
           <span className="block text-gradient">move negócios.</span>
         </h1>
 
         {/* Subtítulo */}
-        <p className="text-[16px] text-[#666] leading-[1.7] max-w-[460px]">
+        <p className="text-[14px] md:text-[16px] text-[#666] leading-[1.7] max-w-full md:max-w-[460px]">
           A Labub é um time completo de{' '}
           <strong className="text-[#aaa] font-medium">frontend, backend, UX e DevOps</strong>.
           Do zero ao deploy, a gente cuida do que você não quer se preocupar.
