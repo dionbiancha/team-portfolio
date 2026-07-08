@@ -22,4 +22,12 @@ describe('Team', () => {
     expect(screen.getByText('UX DESIGN')).toBeInTheDocument()
     expect(screen.getByText('DEVOPS')).toBeInTheDocument()
   })
+
+  it('renders linkedin and portfolio links for each lead', () => {
+    render(<Team />)
+    expect(screen.getByLabelText('LinkedIn de Ana Souza')).toHaveAttribute('href', '#')
+    expect(screen.getByLabelText('Portfólio de Ana Souza')).toHaveAttribute('href', '#')
+    expect(screen.getByLabelText('LinkedIn de Pedro Alves')).toHaveAttribute('href', '#')
+    expect(screen.getByLabelText('Portfólio de Pedro Alves')).toHaveAttribute('href', '#')
+  })
 })
