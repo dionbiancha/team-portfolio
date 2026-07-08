@@ -14,8 +14,8 @@ export default function Nav() {
         <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#6366f1] to-[#3b82f6] flex items-center justify-center text-white font-black text-sm tracking-tighter">
           lb
         </div>
-        <span className="text-[17px] font-extrabold tracking-tight text-white">
-          labub
+        <span className="text-[17px] font-extrabold tracking-tight">
+          <span className="text-white">la</span><span className="text-accent">bub</span>
         </span>
       </div>
 
