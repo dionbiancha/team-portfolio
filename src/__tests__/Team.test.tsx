@@ -22,10 +22,4 @@ describe('Team', () => {
     expect(screen.getByText('UX DESIGN')).toBeInTheDocument()
     expect(screen.getByText('DEVOPS')).toBeInTheDocument()
   })
-
-  it('renders sub-members', () => {
-    render(<Team />)
-    expect(screen.getByText('+ Rafael Mendes')).toBeInTheDocument()
-    expect(screen.getByText('+ Renata Silva')).toBeInTheDocument()
-  })
 })

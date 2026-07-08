@@ -36,15 +36,6 @@ export default function Team() {
             <p className="text-[16px] font-bold text-[#e0e0e0] tracking-tight">
               {member.lead}
             </p>
-            <p className="text-[12px] text-[#555] mt-1">{member.role}</p>
-
-            <div className="mt-3 pt-3 border-t border-white/[0.06]">
-              {member.members.map((m) => (
-                <p key={m} className="text-[11px] text-[#444] mt-1">
-                  + {m}
-                </p>
-              ))}
-            </div>
           </div>
         ))}
       </div>
