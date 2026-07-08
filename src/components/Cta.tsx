@@ -31,10 +31,10 @@ export default function Cta() {
               Email
             </p>
             <a
-              href="mailto:oi@labub.com.br"
+              href="mailto:contato@laercio.me"
               className="text-[18px] md:text-[20px] font-extrabold tracking-tight text-[#e0e0e0] hover:text-white transition-colors"
             >
-              oi@labub.com.br
+              contato@laercio.me
             </a>
             <p className="text-[11px] text-[#333] mt-2">Resposta em até 24h</p>
           </div>
@@ -46,12 +46,12 @@ export default function Cta() {
               WhatsApp
             </p>
             <a
-              href="https://wa.me/5551999990000"
+              href="https://api.whatsapp.com/send/?phone=554598592126&text=Ol%C3%A1+Laercio%2C+gostaria+de+falar+com+voc%C3%AA%21&type=phone_number&app_absent=0"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[18px] md:text-[20px] font-extrabold tracking-tight text-[#25d366] hover:text-[#34d399] transition-colors"
             >
-              +55 (51) 99999-0000
+              +55 (45) 9859-2126
             </a>
             <p className="text-[11px] text-[#333] mt-2">Resposta imediata</p>
           </div>
