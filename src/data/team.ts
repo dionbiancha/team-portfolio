@@ -5,6 +5,8 @@ export type TeamMember = {
   role: string
   photo: string        // path suffix for randomuser.me, e.g. 'women/44'
   members: string[]
+  linkedinUrl: string
+  portfolioUrl: string
 }
 
 export const team: TeamMember[] = [
@@ -14,6 +16,8 @@ export const team: TeamMember[] = [
     role: 'Frontend Lead',
     photo: 'women/44',
     members: ['Rafael Mendes', 'Camila Torres'],
+    linkedinUrl: '#',
+    portfolioUrl: '#',
   },
   {
     area: 'Backend',
@@ -21,6 +25,8 @@ export const team: TeamMember[] = [
     role: 'Backend Lead',
     photo: 'men/32',
     members: ['Thiago Ramos', 'Julia Neves'],
+    linkedinUrl: '#',
+    portfolioUrl: '#',
   },
   {
     area: 'UX Design',
@@ -28,6 +34,8 @@ export const team: TeamMember[] = [
     role: 'UX Lead',
     photo: 'women/68',
     members: ['Diego Farias', 'Letícia Braga'],
+    linkedinUrl: '#',
+    portfolioUrl: '#',
   },
   {
     area: 'DevOps',
@@ -35,5 +43,7 @@ export const team: TeamMember[] = [
     role: 'DevOps Lead',
     photo: 'men/75',
     members: ['Renata Silva', 'Bruno Carvalho'],
+    linkedinUrl: '#',
+    portfolioUrl: '#',
   },
 ]
