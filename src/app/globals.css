@@ -15,11 +15,12 @@
   --color-dimmed: #444444;
 
   --animate-marquee: marquee 28s linear infinite;
+}
 
-  @keyframes marquee {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
+/* @keyframes MUST be outside @theme for Tailwind v4 */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 /* Outline text helper */
