@@ -15,12 +15,25 @@
   --color-dimmed: #444444;
 
   --animate-marquee: marquee 28s linear infinite;
+  --animate-load-bar: load-bar 0.5s ease forwards;
+  --animate-fade-in-up: fade-in-up 0.35s ease;
 }
 
 /* @keyframes MUST be outside @theme for Tailwind v4 */
 @keyframes marquee {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
+}
+
+@keyframes load-bar {
+  0% { width: 0%; }
+  70% { width: 92%; }
+  100% { width: 100%; opacity: 0; }
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* Outline text helper */
