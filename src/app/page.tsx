@@ -3,8 +3,9 @@ import Hero         from '@/components/Hero'
 import Metrics      from '@/components/Metrics'
 import Services     from '@/components/Services'
 import Team         from '@/components/Team'
-import HowItWorks   from '@/components/HowItWorks'
-import Cases        from '@/components/Cases'
+import HowItWorks     from '@/components/HowItWorks'
+import ServicesBrowser from '@/components/ServicesBrowser'
+import Cases          from '@/components/Cases'
 import Testimonials from '@/components/Testimonials'
 import Cta          from '@/components/Cta'
 import Footer       from '@/components/Footer'
@@ -22,6 +23,7 @@ export default function Home() {
           <Services />
           <Team />
           <HowItWorks />
+          <ServicesBrowser />
           <Cases />
           <Testimonials />
           <Cta />
