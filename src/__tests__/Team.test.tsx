@@ -13,22 +13,30 @@ jest.mock('next/image', () => ({
 describe('Team', () => {
   it('renders all team leads and area labels', () => {
     render(<Team />)
-    expect(screen.getByText('Ana Souza')).toBeInTheDocument()
-    expect(screen.getByText('Carlos Lima')).toBeInTheDocument()
-    expect(screen.getByText('Mariana Costa')).toBeInTheDocument()
-    expect(screen.getByText('Pedro Alves')).toBeInTheDocument()
+    expect(screen.getByText('Dionei Bianchati')).toBeInTheDocument()
+    expect(screen.getByText('Laercio Bubiak')).toBeInTheDocument()
     expect(screen.getByText('FRONTEND')).toBeInTheDocument()
-    expect(screen.getByText('BACKEND')).toBeInTheDocument()
-    expect(screen.getByText('UX DESIGN')).toBeInTheDocument()
     expect(screen.getByText('DEVOPS')).toBeInTheDocument()
   })
 
   it('renders linkedin and portfolio links for each lead', () => {
     render(<Team />)
-    expect(screen.getByLabelText('LinkedIn de Ana Souza')).toHaveAttribute('href', '#')
-    expect(screen.getByLabelText('Portfólio de Ana Souza')).toHaveAttribute('href', '#')
-    expect(screen.getByLabelText('LinkedIn de Pedro Alves')).toHaveAttribute('href', '#')
-    expect(screen.getByLabelText('Portfólio de Pedro Alves')).toHaveAttribute('href', '#')
+    expect(screen.getByLabelText('LinkedIn de Dionei Bianchati')).toHaveAttribute(
+      'href',
+      'https://www.linkedin.com/in/dionbiancha'
+    )
+    expect(screen.getByLabelText('Portfólio de Dionei Bianchati')).toHaveAttribute(
+      'href',
+      'https://dionei.com/'
+    )
+    expect(screen.getByLabelText('LinkedIn de Laercio Bubiak')).toHaveAttribute(
+      'href',
+      'https://www.linkedin.com/in/laercio-bubiak/'
+    )
+    expect(screen.getByLabelText('Portfólio de Laercio Bubiak')).toHaveAttribute(
+      'href',
+      'https://www.laercio.me/'
+    )
   })
 
   it('renders specialty tagline and skill tags for each lead', () => {
@@ -38,5 +46,7 @@ describe('Team', () => {
     ).toBeInTheDocument()
     expect(screen.getByText('React')).toBeInTheDocument()
     expect(screen.getByText('Next.js')).toBeInTheDocument()
+    expect(screen.getByText('Kubernetes')).toBeInTheDocument()
+    expect(screen.getByText('Docker')).toBeInTheDocument()
   })
 })
