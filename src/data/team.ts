@@ -11,7 +11,16 @@ export type TeamMember = {
 
 export const team: TeamMember[] = [
   {
-    area: "Frontend",
+    area: "DevOps | Cloud Infrastructure",
+    lead: "Laercio Bubiak",
+    photo: "/team/laercio.png",
+    linkedinUrl: "https://www.linkedin.com/in/laercio-bubiak/",
+    portfolioUrl: "https://www.laercio.me/",
+    tagline: "Deixo a conta da Cloud mais barata e automatizo deploys pra ninguém dormir com medo de subir errado.",
+    tags: ["Kubernetes", "Docker", "Terraform", "AWS", "CI/CD", "Serverless"," Cloud Security"," Cloud Architecture", "Cloud Cost Optimization"],
+  },
+  {
+    area: "Frontend Engineer",
     lead: "Dionei Bianchati",
     photo: "/team/dionei.png",
     linkedinUrl: "https://www.linkedin.com/in/dionbiancha",
@@ -21,12 +30,31 @@ export const team: TeamMember[] = [
   },
 
   {
-    area: "DevOps",
-    lead: "Laercio Bubiak",
-    photo: "/team/laercio.png",
-    linkedinUrl: "https://www.linkedin.com/in/laercio-bubiak/",
-    portfolioUrl: "https://www.laercio.me/",
-    tagline: "Automatiza deploys pra ninguém dormir com medo de subir errado.",
-    tags: ["Kubernetes", "Docker"],
+    area: "Fullstack Engineer",
+    lead: "Vinicios Engelage",
+    photo: "/team/vinicios.jpeg",
+    linkedinUrl: "https://www.linkedin.com/in/viniengelage/",
+    portfolioUrl: "https://www.viniengelage.com/",
+    tagline: "Resolvo bugs para não me estressar e me estresso corrigindo bugs.",
+    tags: ["Javascript", "Web", "Mobile", "React", "NextJS", "React Native"," Docker"," Expo"],
+  },
+    {
+    area: "Software Engineer",
+    lead: "Riad Younes",
+    photo: "/team/riad.jpeg",
+    linkedinUrl: "",
+    portfolioUrl: "",
+    tagline: "",
+    tags: ["Automation AI", "Type Script", "Node", "React","Integration API"],
+  },
+
+  {
+    area: "Backend Engineer",
+    lead: "Gregory Xavier Fleury Torres",
+    photo: "/team/gregory.jpeg",
+    linkedinUrl: "",
+    portfolioUrl: "",
+    tagline: "Transformando ideias em algoritmos.",
+    tags: ["MySQL", "Postgresql", "Fast API", "Java", "ORM", "C#","Docker","Integração"],
   },
 ];
