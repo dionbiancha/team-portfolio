@@ -13,7 +13,7 @@ export default function Team() {
         <span className="text-[#444]">Especialistas de verdade.</span>
       </h2>
 
-      <div className="grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-4">
+      <div className="grid grid-cols-[repeat(auto-fit,minmax(400px,1fr))] gap-4">
         {team.map((member) => (
           <div
             key={member.area}
@@ -23,13 +23,13 @@ export default function Team() {
             <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[rgba(99,102,241,0.5)] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
 
             {/* Photo */}
-            <div className="w-16 h-16 rounded-full overflow-hidden mb-4 flex-shrink-0">
+            <div className="group/photo w-16 h-16 rounded-full overflow-hidden mb-4 flex-shrink-0">
               <Image
                 src={member.photo}
                 alt={member.lead}
                 width={64}
                 height={64}
-                className="w-full h-full object-cover grayscale contrast-[1.05]"
+                className="w-full h-full object-cover grayscale contrast-[1.05] transition-[filter] duration-300 group-hover/photo:grayscale-0"
               />
             </div>
 
