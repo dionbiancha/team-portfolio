@@ -13,7 +13,7 @@ export default function Team() {
         <span className="text-[#444]">Especialistas de verdade.</span>
       </h2>
 
-      <div className="grid grid-cols-[repeat(auto-fit,minmax(400px,1fr))] gap-4">
+      <div className="grid grid-cols-[repeat(auto-fit,minmax(min(400px,100%),1fr))] gap-4">
         {team.map((member) => (
           <div
             key={member.area}
