@@ -1,0 +1,6 @@
+<svg width="130" height="44" viewBox="0 0 130 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pago">
+  <polygon points="14,2 26,9 26,23 14,30 2,23 2,9" fill="none" stroke="white" stroke-width="2" opacity="0.9" />
+  <text x="9" y="21" font-family="system-ui" font-size="13" font-weight="900" fill="white" opacity="0.95">P</text>
+  <text x="36" y="24" font-family="system-ui" font-size="15" font-weight="800" fill="white" opacity="0.95" letter-spacing="-0.5">pago</text>
+  <text x="36" y="38" font-family="system-ui" font-size="8" font-weight="500" fill="white" opacity="0.45" letter-spacing="1.5">FINTECH</text>
+</svg>

@@ -1,68 +1,10 @@
 // src/components/Cases.tsx
-import { cases, type Case, type CaseLogo } from '@/data/cases'
+import { cases, type Case } from '@/data/cases'
 
 const themeClasses: Record<Case['theme'], string> = {
   blue:  'bg-gradient-to-br from-[#0f172a] to-[#1e3a8a]',
   dark:  'bg-gradient-to-br from-[#0a0a0a] to-[#1f2937]',
   green: 'bg-gradient-to-br from-[#022c22] to-[#064e3b]',
-}
-
-function CaseLogoSvg({ logo }: { logo: CaseLogo }) {
-  return (
-    <svg
-      width={logo.width}
-      height={logo.height}
-      viewBox={`0 0 ${logo.width} ${logo.height}`}
-      fill="none"
-      aria-label={logo.ariaLabel}
-    >
-      {logo.shapes.map((shape, i) => {
-        switch (shape.type) {
-          case 'rect':
-            return (
-              <rect
-                key={i}
-                x={shape.x}
-                y={shape.y}
-                width={shape.width}
-                height={shape.height}
-                rx={shape.rx}
-                fill={shape.fill}
-                opacity={shape.opacity}
-                transform={shape.transform}
-              />
-            )
-          case 'text':
-            return (
-              <text
-                key={i}
-                x={shape.x}
-                y={shape.y}
-                fontFamily={shape.fontFamily}
-                fontSize={shape.fontSize}
-                fontWeight={shape.fontWeight}
-                fill={shape.fill}
-                opacity={shape.opacity}
-                letterSpacing={shape.letterSpacing}
-              >
-                {shape.content}
-              </text>
-            )
-          case 'polygon':
-            return (
-              <polygon
-                key={i}
-                points={shape.points}
-                fill={shape.fill}
-                stroke={shape.stroke}
-                strokeWidth={shape.strokeWidth}
-                opacity={shape.opacity}
-              />
-            )
-        }
-      })}
-    </svg>
-  )
 }
 
 export default function Cases() {
@@ -81,7 +23,8 @@ export default function Cases() {
           <div key={c.name} className="bg-card border border-white/[0.06] rounded-xl overflow-hidden">
             {/* Logo area */}
             <div className={`h-[140px] flex items-center justify-center ${themeClasses[c.theme]}`}>
-              <CaseLogoSvg logo={c.logo} />
+              {/* eslint-disable-next-line @next/next/no-img-element -- local SVG logo, no optimization needed */}
+              <img src={c.logo} alt={c.name} className="h-10 w-auto" />
             </div>
 
             {/* Body */}
