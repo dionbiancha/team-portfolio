@@ -6,6 +6,7 @@ export type Case = {
   stack: string[]
   theme: 'blue' | 'dark' | 'green'
   logo: string
+  url: string
 }
 
 export const cases: Case[] = [
@@ -16,6 +17,7 @@ export const cases: Case[] = [
     stack: ['React', 'Node.js', 'AWS'],
     theme: 'blue',
     logo: '/cases/moda-sul.svg',
+    url: '#',
   },
   {
     name: 'Saúde+',
@@ -24,6 +26,7 @@ export const cases: Case[] = [
     stack: ['Next.js', 'Python', 'UX'],
     theme: 'dark',
     logo: '/cases/saude-mais.svg',
+    url: '#',
   },
   {
     name: 'Pago',
@@ -32,5 +35,6 @@ export const cases: Case[] = [
     stack: ['GraphQL', 'K8s', 'CI/CD'],
     theme: 'green',
     logo: '/cases/pago.svg',
+    url: '#',
   },
 ]

@@ -20,7 +20,14 @@ export default function Cases() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
         {cases.map((c) => (
-          <div key={c.name} className="bg-card border border-white/[0.06] rounded-xl overflow-hidden">
+          <a
+            key={c.name}
+            href={c.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Ver projeto ${c.name}`}
+            className="block bg-card border border-white/[0.06] rounded-xl overflow-hidden hover:border-accent/[0.3] transition-colors"
+          >
             {/* Logo area */}
             <div className={`h-[140px] flex items-center justify-center ${themeClasses[c.theme]}`}>
               {/* eslint-disable-next-line @next/next/no-img-element -- local SVG logo, no optimization needed */}
@@ -49,7 +56,7 @@ export default function Cases() {
                 ))}
               </div>
             </div>
-          </div>
+          </a>
         ))}
       </div>
     </section>
