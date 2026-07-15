@@ -1,5 +1,5 @@
 // src/components/Cases.tsx
-import { cases, type Case } from '@/data/cases'
+import { cases, type Case, type CaseLogo } from '@/data/cases'
 
 const themeClasses: Record<Case['theme'], string> = {
   blue:  'bg-gradient-to-br from-[#0f172a] to-[#1e3a8a]',
@@ -7,33 +7,60 @@ const themeClasses: Record<Case['theme'], string> = {
   green: 'bg-gradient-to-br from-[#022c22] to-[#064e3b]',
 }
 
-function CaseLogo({ name }: { name: string }) {
-  if (name === 'Moda Sul') {
-    return (
-      <svg width="120" height="40" viewBox="0 0 120 40" fill="none" aria-label="Moda Sul">
-        <rect x="0" y="8" width="6" height="24" rx="3" fill="white" opacity="0.9" />
-        <rect x="6" y="8" width="6" height="14" rx="2" fill="white" opacity="0.9" transform="skewX(-8)" />
-        <rect x="12" y="8" width="6" height="24" rx="3" fill="white" opacity="0.9" />
-        <text x="26" y="27" fontFamily="system-ui" fontSize="15" fontWeight="800" fill="white" letterSpacing="-0.5" opacity="0.95">MODA SUL</text>
-      </svg>
-    )
-  }
-  if (name === 'Saúde+') {
-    return (
-      <svg width="140" height="40" viewBox="0 0 140 40" fill="none" aria-label="Saúde+">
-        <rect x="0" y="12" width="24" height="6" rx="3" fill="white" opacity="0.9" />
-        <rect x="9" y="3" width="6" height="24" rx="3" fill="white" opacity="0.9" />
-        <text x="32" y="27" fontFamily="system-ui" fontSize="14" fontWeight="700" fill="white" opacity="0.95" letterSpacing="-0.3">SAÚDE</text>
-        <text x="84" y="27" fontFamily="system-ui" fontSize="14" fontWeight="900" fill="#34d399">+</text>
-      </svg>
-    )
-  }
+function CaseLogoSvg({ logo }: { logo: CaseLogo }) {
   return (
-    <svg width="130" height="44" viewBox="0 0 130 44" fill="none" aria-label="Pago">
-      <polygon points="14,2 26,9 26,23 14,30 2,23 2,9" fill="none" stroke="white" strokeWidth="2" opacity="0.9" />
-      <text x="9" y="21" fontFamily="system-ui" fontSize="13" fontWeight="900" fill="white" opacity="0.95">P</text>
-      <text x="36" y="24" fontFamily="system-ui" fontSize="15" fontWeight="800" fill="white" opacity="0.95" letterSpacing="-0.5">pago</text>
-      <text x="36" y="38" fontFamily="system-ui" fontSize="8" fontWeight="500" fill="white" opacity="0.45" letterSpacing="1.5">FINTECH</text>
+    <svg
+      width={logo.width}
+      height={logo.height}
+      viewBox={`0 0 ${logo.width} ${logo.height}`}
+      fill="none"
+      aria-label={logo.ariaLabel}
+    >
+      {logo.shapes.map((shape, i) => {
+        switch (shape.type) {
+          case 'rect':
+            return (
+              <rect
+                key={i}
+                x={shape.x}
+                y={shape.y}
+                width={shape.width}
+                height={shape.height}
+                rx={shape.rx}
+                fill={shape.fill}
+                opacity={shape.opacity}
+                transform={shape.transform}
+              />
+            )
+          case 'text':
+            return (
+              <text
+                key={i}
+                x={shape.x}
+                y={shape.y}
+                fontFamily={shape.fontFamily}
+                fontSize={shape.fontSize}
+                fontWeight={shape.fontWeight}
+                fill={shape.fill}
+                opacity={shape.opacity}
+                letterSpacing={shape.letterSpacing}
+              >
+                {shape.content}
+              </text>
+            )
+          case 'polygon':
+            return (
+              <polygon
+                key={i}
+                points={shape.points}
+                fill={shape.fill}
+                stroke={shape.stroke}
+                strokeWidth={shape.strokeWidth}
+                opacity={shape.opacity}
+              />
+            )
+        }
+      })}
     </svg>
   )
 }
@@ -54,7 +81,7 @@ export default function Cases() {
           <div key={c.name} className="bg-card border border-white/[0.06] rounded-xl overflow-hidden">
             {/* Logo area */}
             <div className={`h-[140px] flex items-center justify-center ${themeClasses[c.theme]}`}>
-              <CaseLogo name={c.name} />
+              <CaseLogoSvg logo={c.logo} />
             </div>
 
             {/* Body */}
